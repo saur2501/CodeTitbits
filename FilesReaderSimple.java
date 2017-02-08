@@ -25,46 +25,30 @@ public class FilesReaderSimple {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
+        File file;
+        String str;
+        BufferedWriter bw = null;
+        BufferedReader br = null;
+        File dir = new File("C:\\Users\\Saurabh\\Desktop\\Hadoop\\Lesson 1_ Big Data");
+        String[] paths = dir.list();
+        System.out.println(Arrays.toString(paths));
         try{
-            File dir = new File("C:\\dev\\FilesToRead");
-            String[] paths = dir.list();
-            System.out.println(Arrays.toString(paths));
-            File file;
-            String str;
-            BufferedWriter bw = null;
-            BufferedReader br = null;
-            try {
-                bw= new BufferedWriter(new FileWriter("C:\\dev\\FilesToWrite\\fileOutput.txt"));
-                bw.write("Krishna\n");
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
+            bw= new BufferedWriter(new FileWriter("C:\\Users\\Saurabh\\Desktop\\Hadoop\\L1.txt"));
             for(String filename : paths){
-                file = new File("C:\\dev\\FilesToRead\\" + filename);
-                System.out.println("File under test: " + file.getName());
-                try{
-                    bw.write("\nFile under test: " + file.getName() + "\n======================\n");
-                    br = new BufferedReader(new FileReader(file));
-                    while((str = br.readLine()) != null){
-                        System.out.println("Line is: " + str);
-                        if(!str.equals("") && !Character.isDigit(str.charAt(0)))
-                            bw.write(str + "\n");
-                    }
-                    //System.out.println("Hi Baby");
-                } catch(Exception e){e.printStackTrace();}
-            }
-            try {
+                file = new File(dir.getAbsolutePath() + "\\" + filename);
+                System.out.println("File : " + file.getName());
+                br = new BufferedReader(new FileReader(file));
+                bw.write("\nFile : " + file.getName() + "\n======================\n");                    
+                while((str = br.readLine()) != null){
+                    System.out.println("Line is: " + str);
+                    if(!str.equals("") && !Character.isDigit(str.charAt(0)))
+                        bw.write(str + "\n");
+                }
                 br.close();
-                bw.close();
-            } catch (IOException ex) {
-                Logger.getLogger(FilesReader.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }catch(Exception e){
-            BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\dev\\FilesToWrite\\logs.txt"));
-            bw.write("Error happened, Man!!");
-            bw.close();
-        }
+        } catch(Exception e){e.printStackTrace();}
+        finally {bw.close();}
     }
     
 }
