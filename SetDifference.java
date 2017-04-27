@@ -12,7 +12,7 @@ import java.util.Iterator;
  */
 
 /**
- *
+ * tells elements in csv's that exist in first file but not in second. Eg- drill keywords that are not in hive.
  * @author IC071166
  */
 public class SetDifference {

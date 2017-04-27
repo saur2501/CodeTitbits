@@ -12,7 +12,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 /**
- *
+ * prepend something to a regex- eg- useful in drill queries to add quotes (or storage plugin) for drillbutNotHive keywords.
  * @author ic071166
  */
 public class PrependWords {

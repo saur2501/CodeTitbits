@@ -10,7 +10,7 @@ import java.io.FileReader;
  */
 
 /**
- *
+ * Compares all files in 2 directories (ignoring white spaces)- 1st mismatch is informed. Eg- SQL's that didn't match TPCDS.
  * @author IC071166
  */
 public class FileComparator {

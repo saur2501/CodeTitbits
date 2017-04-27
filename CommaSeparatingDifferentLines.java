@@ -1,4 +1,4 @@
-package filesreader;
+package org;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -6,10 +6,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 /**
- *
+ * makes all files in subfolder 'updated' and comma-separates each line of file. Eg- useful for making hive keywords csv.
  * @author ic071166
  */
-public class RemoveWhiteSpacesFromFiles {
+public class CommaSeparatingDifferentLines {
 
     public static void main(String args[]) throws Exception{
         File dir = new File("C:\\Users\\ic071166\\Downloads\\HadoopTranscripts\\Lesson 1_BigData");

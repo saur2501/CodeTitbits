@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package filesreader;
+package org;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -12,7 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Arrays;
 /**
- *
+ * Reads all files in a folder and makes a common file- containing file names, followed by sentences in separate lines (ignoring lines that start with digit or newline)
  * @author Saurabh
  */
 public class SentencesInDifferentLines {

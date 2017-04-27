@@ -5,7 +5,6 @@ package org;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package querymetricscollectorlocal;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,10 +13,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 /**
- *
+ * removes all white spaces all files in a directory and stores in 'updated' subfolder with same file names. Eg- useful for reading query from file.
  * @author ic071166
  */
-public class QueryMetricsCollectorLocal {
+public class ParagraphMaking {
 
     public static void main(String args[]) throws Exception{
         File dir = new File("C:\\Users\\ic071166\\Desktop\\TPCDS\\geetha_tpcds\\DrillQueries_v1");
