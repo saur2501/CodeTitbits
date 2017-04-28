@@ -1,6 +1,6 @@
-package filesreader;
+package org;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
+//import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 /*
@@ -22,7 +22,7 @@ public class FileComparator {
         //File[] files2 = dir1.listFiles();
         BufferedReader br1 = null;
         BufferedReader br2 = null;
-        BufferedWriter bw = null;
+        //BufferedWriter bw = null;
         int i = 0;
         String str = "";
         String s1,s2,s3,s41,s42;

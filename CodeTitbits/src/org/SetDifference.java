@@ -1,6 +1,6 @@
+package org;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -16,7 +16,8 @@ import java.util.Iterator;
  * @author IC071166
  */
 public class SetDifference {
-    public static void main(String[] args) throws Exception{
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public static void main(String[] args) throws Exception{
         BufferedReader br1 = new BufferedReader(new FileReader("C:\\Users\\ic071166\\Desktop\\temp\\file3.txt"));
         BufferedReader br2 = new BufferedReader(new FileReader("C:\\Users\\ic071166\\Desktop\\temp\\file4.txt"));
         String str1 = null, str2 = null;
@@ -56,5 +57,7 @@ public class SetDifference {
         while(itr.hasNext()){
             System.out.print("," + itr.next());
         }
+        br1.close();
+        br2.close();
     }
 }
