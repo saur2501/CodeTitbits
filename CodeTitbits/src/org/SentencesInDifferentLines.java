@@ -1,4 +1,4 @@
-package org;
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,7 +16,7 @@ public class SentencesInDifferentLines {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-        File dir = new File("input");											//C:\\Users\\Saurabh\\Desktop\\Hadoop\\Lesson 4_ MapReduce Design Patterns
+        File dir = new File("C:\\Users\\I341365\\Desktop\\PIES\\I\\Curiosities\\Experimentation\\e");											//C:\\Users\\Saurabh\\Desktop\\Hadoop\\Lesson 4_ MapReduce Design Patterns
         String[] paths = dir.list();
         System.out.println(Arrays.toString(paths));
         File file;
@@ -26,7 +26,7 @@ public class SentencesInDifferentLines {
         BufferedReader br = null;
         BufferedWriter bw = null;
         try{
-            bw= new BufferedWriter(new FileWriter("output/output.txt"));							//dir.getAbsolutePath() + "\\..\\L4.txt"
+            bw= new BufferedWriter(new FileWriter("C:\\Users\\I341365\\Desktop\\output.txt"));							//dir.getAbsolutePath() + "\\..\\L4.txt"
             for(String filename : paths){
                 file = new File(dir.getAbsolutePath() + "\\" + filename);
                 System.out.println("File : " + file.getName());
