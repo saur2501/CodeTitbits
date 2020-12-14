@@ -11,10 +11,10 @@ public class TwitterApp {
 	public static void main(String[] args) throws TwitterException {
 		ConfigurationBuilder cb =  new ConfigurationBuilder();
 		cb.setDebugEnabled(true)
-			.setOAuthConsumerKey("hjtEuUY04uf7jNXJy2bSDUyt6")
-			.setOAuthConsumerSecret("P7Yu4MlTQ7jTVTuOglzC1ryHW983wj55j8XXxRk8a7FkEomWpv")
-			.setOAuthAccessToken("184086796-T0Kxh5lkPH8oaaFnIL3tp0dwRBrHmni3bk4aYesR")
-			.setOAuthAccessTokenSecret("i019i8DmPWE9Z5wRtQolXrpW9GZcgO6xBjLaV3cjjEP2u");
+			.setOAuthConsumerKey("setOAuthConsumerKey")
+			.setOAuthConsumerSecret("setOAuthConsumerSecret")
+			.setOAuthAccessToken("setOAuthAccessToken")
+			.setOAuthAccessTokenSecret("setOAuthAccessTokenSecret");
 		TwitterFactory tf = new TwitterFactory(cb.build());
 		Twitter twitter = tf.getInstance();
 		List<Status> status = twitter.getHomeTimeline();
